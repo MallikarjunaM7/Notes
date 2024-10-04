@@ -10,7 +10,7 @@ const errorMiddleware = require("./middlewares/error-middleware")
 app.use(express.json())
 
 const corsOptions = {
-    origin: "https://notes-frontend-1461.onrender.com",
+    origin: "https://notes-frontend-j95o.onrender.com",
     method: "GET, POST, PUT, PATCH, DELETE, HEAD",
     credentials: true,
 }
