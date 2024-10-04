@@ -10,7 +10,7 @@ export const Edit = () => {
     const {id} = useParams()
     console.log("iddddd", id)
     const navigate = useNavigate()
-    const backapi = "https://notes-backend-22yb.onrender.com"
+    const backapi = "https://notes-backend-ax7n.onrender.com"
 
     const [details, setDetails] = useState(
         {   username: "",
