@@ -12,7 +12,7 @@ export const Todos = () => {
     const [isLoad, setIsLoad] = useState(false)
     const navigate = useNavigate()
 
-    const backapi = "http://localhost:5000"
+    const backapi = "https://notes-backend-22yb.onrender.com"
     const handleChange = (e) => {
         const {name, value} = e.target
         setTodoData({...todoData, [name]: value})
