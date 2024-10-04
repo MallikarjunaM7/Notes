@@ -18,7 +18,7 @@ export const Register = () => {
         otp: ""
     })
 
-    const backapi = "http://localhost:5000"
+    const backapi = "https://notes-backend-22yb.onrender.com"
 
     const [otpInput, setOtpInput] = useState(false)
     const [processing, setProcessing] = useState(false)
