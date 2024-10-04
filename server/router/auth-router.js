@@ -1,0 +1,23 @@
+const express = require("express")
+const router = express.Router()
+const authControllers = require("../controllers/auth-controller")
+const authMiddleware = require("../middlewares/auth-middleware")
+const {registerSchema, loginSchema, updateMainSchema, passwordSchema, forgotPasswordSchema} = require("../validators/auth-validators")
+const validate = require("../middlewares/validate-middleware")
+
+router.route("/register").post(validate(registerSchema), authControllers.Register)
+router.route("/verifyotp/:email").post(authControllers.verifyOtp)
+router.route("/login").post(validate(loginSchema), authControllers.login)
+router.route("/forgotpassword").post(authControllers.forgotPassword)
+router.route("/verifyotpforgot").post(authControllers.verifyOtpForgot)
+router.route("/changeforgotpassword").post(validate(forgotPasswordSchema), authControllers.changeForgotPassword)
+router.route("/updatemainuser").patch(authMiddleware, validate(updateMainSchema) , authControllers.updateMainUser)
+router.route("/getmydetails").post(authMiddleware, authControllers.getMyDetails)
+router.route("/password").patch(authMiddleware, validate(passwordSchema), authControllers.changePassword)
+router.route("/addtodo").post(authMiddleware, authControllers.addTodo)
+router.route("/getalltodos").post(authMiddleware, authControllers.getAllTodos)
+router.route("/deletetodo").post(authMiddleware, authControllers.deleteTodo)
+router.route("/gettodo").post(authMiddleware, authControllers.getTodo)
+router.route("/updatetodo").post(authMiddleware, authControllers.updateTodo)
+
+module.exports = router
