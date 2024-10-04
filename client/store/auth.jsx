@@ -7,7 +7,7 @@ export const AuthProvider = ({children}) => {
     const [token, setToken] = useState(localStorage.getItem("token"))
     const [data, setData] = useState({})
     const [isLoading, setIsLoading] = useState(false)
-    const backapi = "https://notes-backend-22yb.onrender.com"
+    const backapi = "https://notes-backend-ax7n.onrender.com"
 
     const storeTokenInLS = (token) => {
         setToken(token)
