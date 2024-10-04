@@ -20,7 +20,7 @@ export const ChangePassword = () => {
         setData({...data, [name]: value})
     }
 
-    const backapi = "http://localhost:5000"
+    const backapi = "https://notes-backend-22yb.onrender.com"
 
     const handleSubmit = async(e) => {
         e.preventDefault()
