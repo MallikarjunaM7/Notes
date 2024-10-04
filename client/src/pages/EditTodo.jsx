@@ -9,7 +9,7 @@ export const EditTodo = () => {
 
     const {token} = useAuth()
     const [todo, setTodo] = useState({todo: ""})
-    const backapi = "https://notes-backend-22yb.onrender.com"
+    const backapi = "https://notes-backend-ax7n.onrender.com"
 
     const navigate = useNavigate()
 
