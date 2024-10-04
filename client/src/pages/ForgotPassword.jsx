@@ -22,7 +22,7 @@ export const ForgotPassword = () => {
         setData({...data, [name]: value})
     }
 
-    const backapi = "http://localhost:5000"
+    const backapi = "https://notes-backend-22yb.onrender.com"
 
     const handleChangePassword = (e) => {
         const {name, value} = e.target
