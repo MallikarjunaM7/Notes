@@ -14,6 +14,8 @@ export const Login = () => {
         password: ""
     })
 
+    const [isLogging, setIslogging] = useState(false)
+
     const navigate = useNavigate();
 
     const handleChange = async(e) => {
@@ -28,6 +30,7 @@ export const Login = () => {
 
     const handleSubmit = async(e) => {
         e.preventDefault()
+        setIslogging(true)
         try {
             const response = await fetch(`${backapi}/api/auth/login`, {
                 method: "POST",
@@ -48,7 +51,7 @@ export const Login = () => {
                 }else{
                     toast.error(message.extraDetails)
                 }
-            }
+            }setIslogging(false)
         } catch (error) {
             console.log(error)
         }
@@ -65,6 +68,7 @@ export const Login = () => {
                 <button type="submit">Login</button>
                 <br />
                 <h2><NavLink to="/forgotpassword">Forgot Password</NavLink></h2>
+                {isLogging ? <>Logging...</>: <></>}
             </form>
         </>
     )
