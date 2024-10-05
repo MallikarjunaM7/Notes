@@ -241,15 +241,6 @@ ul{
     margin-left: 50px;
   }
 
-  .full{
-    margin-left: 200px;
-    background-color: aliceblue;
-    display: flex;
-    justify-content: center;
-    width: 25%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
   
   body {
     margin: auto;
